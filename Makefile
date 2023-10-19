@@ -2,7 +2,7 @@ CONFIG_DIR := config/development.yml
 IMAGE := dd3qdrant
 PORT := 6333
 
-RUN := docker run --rm -it \
+RUN := docker run -it \
 	-p $(PORT):$(PORT) \
 	-v `pwd`/config:/qdrant/config \
 	$(IMAGE)
